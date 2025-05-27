@@ -62,6 +62,6 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.7.5") // o la versión más reciente
 
     implementation(platform("com.google.firebase:firebase-bom:32.2.3"))
-    implementation ("com.google.firebase:firebase-database-ktx")
-
+    implementation("com.google.firebase:firebase-database-ktx")
+    implementation("com.google.firebase:firebase-analytics")
 }
