@@ -16,10 +16,6 @@ fun observeSensorData(onDataChange: (SensorData) -> Unit) {
             val nivel = snapshot.getValue(Int::class.java) ?: 0
             Log.d("Firebase", "Nivel de agua: $nivel")
 
-//            flujoRef.get().addOnSuccessListener { flujoSnapshot ->
-//                val flujo = flujoSnapshot.getValue(Float::class.java) ?: 0f
-//                onDataChange(SensorData(nivel, flujo))
-//            }
             val flujo = snapshot.getValue(Float::class.java)
             Log.d("Firebase", "Flujo de agua: $flujo")
         }
