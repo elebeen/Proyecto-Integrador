@@ -8,8 +8,8 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
 fun observeSensorData(onDataChange: (SensorData) -> Unit) {
-    val nivelRef = FirebaseDatabase.getInstance().getReference("nivel_agua")
-    val flujoRef = FirebaseDatabase.getInstance().getReference("flujo_agua")
+    val nivelRef = FirebaseDatabase.getInstance().getReference("sensor_data/nivel_agua")
+    val flujoRef = FirebaseDatabase.getInstance().getReference("sensor_data/flujo_agua")
 
     nivelRef.addValueEventListener(object : ValueEventListener {
         override fun onDataChange(snapshot: DataSnapshot) {
